@@ -1,0 +1,313 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+local OrionLib = loadstring(game:HttpGet((FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('iHyVOKhbcyjwKLGvRpmiCBUxcjLEkXtmOAnftwtIkXHjIhVuTMREvcIaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NobGV4d2FyZS9Pcmlvbi9tYWluL3NvdXJjZQ=='))))()
+local Window = OrionLib:MakeWindow({Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('NDZSnvEceSxLmZgbpfsYZqKMHNNhYCurFfxJLldDBkTTSglzVdsxsIqU2FmZXR5IEh1YvCfm6HvuI8='), HidePremium = true, SaveConfig = true, ConfigFolder = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('xrOZsPQIlqhThBrrqrHUwYGHtryOfPgirwNoVCMkTboZyxxplFjYTjCU2FmZXR5IEh1Yg==')})
+
+--[[
+Name = <ScriptSavvyHUB> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+local Tab = Window:MakeTab({
+    Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('GTKiArYzqXrSPOOdPWeTggzMjZZrMAetpkmpEdTMzFqGeSrcTUMcFKHSW5mb3JtYXRpb24='),
+    Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('WRoYzMMinrUJQqlGNIKfSlOsYHuZFohHxmCxYmyTeIIpDOMwYYBuauHcmJ4YXNzZXRpZDovLzE3NDc4NTkwODU0'),
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('cSxSjkmDhBChDJmIRqNgpZMevabkUXthoxgFWvfnFILGMfNKYDlTnrDUkVHQVJESU5HIEhVQg=='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('vwQmgXRpNtiKjatGKGMMCPmmbltgdmwowfEVpjNkupXnKsYMmjabhIy4oCiTXkgU0FGRVRZSFVCIGluIFBldCBTaW11bGF0b3IgOTkgaXMgYSBwb3RlbnQgc2NyaXB0IHRoYXQgZW5yaWNoZXMgeW91ciBnYW1pbmcgZXhwZXJpZW5jZSBieSBwcm92aWRpbmcgZXNzZW50aWFsIGZlYXR1cmVzIGZvciBzZWFtbGVzcyBnYW1lcGxheeKAog=='))
+local Section = Tab:AddSection({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('BFKzQTsgbsIduLsfFxgIlAUDLwOOImQteniOJklByTWQYsLGEcKaVJEUGxhdGZvcm0=')
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QduYItcXBQUOuNlbCwFfsEFugkGoMABpJWJkIfSXFIyqqOybXsyKNtPU3VwcG9ydCBNZQ=='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('swTwaxgmoTuxjMKfXpZjMZXDmEjMEDJoyFwSKMSArOTzJCEAKNfSeBSQnkgU3Vic2NyaWJpbmcgTXkgWW91VHViZSBDaGFubmVs'))
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('WudWWKGARhLAuEnvrJgwUGiYRUPtxThHcFMeKCEOiUvpdNHJIVHwUSqQXV0b0Zhcm0='),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('LWxqDvRKQizTpbQauuZrHgdVzMzOGWfiDaIDwuxNTlBKRBVwpDzTapKcmJ4YXNzZXRpZDovLzE3NDc4NjMzMDk5'),
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+local Section = Tab:AddSection({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QFEEnvQYEUfOkIPaoXJwMJyBObIsfWrmaZEoonQZGspgOjuipvaZqAyRmVhdHVyZXM=')
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('TrtMDqnmbmHyuiqXZPxGcQGggTwVCQwJLTcrzUmFnzzbcTOyEkIofMDQXV0byBBcmVh'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('XJvJisIZAEXBOpZvlWIDJMmSpNXWTXuTywTmRhPXELwOifdRyMEPQzWQXV0byBSYW5r'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('DQhRYryAZhLqhPzNeyZnOMffcdgySHXaNupPVgJsYPnwPrNArOgrSLiQXV0byBGYXJtIENvaW4='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('CKbzRMveUiMRLxDYhvLTlpuhijPSzPbfQWFHVMOxtOCtaYjNnjdHjypQXV0byBGYXJtIEdlbXM='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+local Section = Tab:AddSection({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('GATgPFtWBoHOWWloSqYlixraLoQLNszUSwdzBtqYnSDwdZxMyVqFQaqTW9yZSBGZWF0dXJlcw==')
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('HYykmMiMeMZnEqLQqsAfOYiqogKbAkGwWGCwfIEXfMdRFQFdYsIxfJhQXV0byBTaGlueSBSZWxpYw=='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('aVPjgyYwLnKknyGesPSRXxikIZbvmnYgodcGDQwCiwCDIRuaKdydGaHTWFpbCBEdXBpbmc='),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('LzDtbYfoyzmpNHSlWGwhmcppkOLIPHhxAIFCxsPCJZRiXvfCaEwwPXucmJ4YXNzZXRpZDovLzE3NDc4NzcyNzQ5'),
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('nhmAQGuCqKSlrkVVLTebrNsRBbmiOiYcDxbgFrYKehvQjuMEHNruNxjR3VpZGU='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lwGfmXFZirRXRKhDtikhIlfGhCdrIWznlGDiVpKNlOYInTgbZkvcxUs4oCiRW5zdXJlIHRoYXQgeW91IGhhdmUgdHdvIGRpc3RpbmN0IGFjY291bnRzLCBhbmQgcnVuIHRoaXMgc2NyaXB0IG9uIHRoZSBhY2NvdW50IGNvbnRhaW5pbmcgcGV0cyAoZXhjbHVzaXZlIG9yIGh1Z2UgcGV0cyBvbmx5KS4gT25jZSB5b3U=')ve entered the alternate username, click FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QFLDDzXQUAaGLOiZmYKlbzPRquNrCHtcuhbtSHqYyhBcUsolFoHTLEFU3RhcnQgRHVwaW5n') and patiently wait for 30 seconds•FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('TYtBAKYbomkJZrcRrWfcbwdqcGfkyYMGPSRnGwClCNqYNjoNXNIaVjZKQ0KVGFiOkFkZFBhcmFncmFwaCg=')CautionFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('sMIMsjTfGHBPRUBSOZrajcPmvWNyiwMytqHEErnuQLUZDKKkyeYyncpLA==')•It only functions for huge, exclusive, and gems•FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('jHDQSChBRGhauVbFvQktOmvfSETMorzADtGOLJavsNBnIXeVlwPpDfdKQ0KVGFiOkFkZFRleHRib3goew0KCU5hbWUgPSA=')UsernameFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lIiKfdgaNsQLZnFwanYnUvnRpPbIxZzMPbUcxnKOWeMPWExydQsCESQLA0KCURlZmF1bHQgPSA=')Type Username!FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('BuCXBjUCbOljeMeHEXMyWceitSCaaszQaFXzWpulCjGQlcCrHxbGXMfLA0KCVRleHREaXNhcHBlYXIgPSB0cnVlLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQoJCXByaW50KFZhbHVlKQ0KCWVuZAkgIA0KfSkNCg0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIHRleHRib3guDQpEZWZhdWx0ID0gPHN0cmluZz4gLSBUaGUgZGVmYXVsdCB2YWx1ZSBvZiB0aGUgdGV4dGJveC4NClRleHREaXNhcHBlYXIgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGV4dCBkaXNhcHBlYXIgaW4gdGhlIHRleHRib3ggYWZ0ZXIgbG9zaW5nIGZvY3VzLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSB0ZXh0Ym94Lg0KXV0NClRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Start DupingFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('TmyTXnGJTlWSrKzsSkNcgaYfjDMGxRxGxwDEKeVILCDyVlhPROYrhjfLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('IewlhconyeCCrkKyeIjAmAVMDTmZsHAtJYlFrvFeJHEJJXfvypWnFcPKSkoKQ0KICAJZW5kICAgIA0KfSkNCmxvY2FsIFRhYiA9IFdpbmRvdzpNYWtlVGFiKHsNCglOYW1lID0g')Trade ScamFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('GPmkbdRBtRjoAttVunpeNIJnBUBcTRZkFDIXbsuSjoACMuzDNuwPuVNLA0KCUljb24gPSA=')rbxassetid://17316268316FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('DQUYfiwzqzNuQZNZgVpOGFKmXzzJHtoOSoSIHnbRzPOAlHvwWvlIRQRLA0KCVByZW1pdW1Pbmx5ID0gZmFsc2UNCn0pDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0YWIuDQpJY29uID0gPHN0cmluZz4gLSBUaGUgaWNvbiBvZiB0aGUgdGFiLg0KUHJlbWl1bU9ubHkgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGFiIGFjY2Vzc2libGUgdG8gU2lydXMgUHJlbWl1bSB1c2VycyBvbmx5Lg0KXV0NClRhYjpBZGRQYXJhZ3JhcGgo')GuideFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('swHSnYfgkJOblCYWNhEFdBMSwvBQmhOFcGGNvBmquxAfalUzpdknbWcLA==')•To make this work, initiate a trade with another player and ensure to input their username. Once youFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('KTLpIUPkfQAeTlBEFoRHuhABVssTmupwfnqehggYTwuVXgakMLbCRbFdmUgZW50ZXJlZCB0aGVpciB1c2VybmFtZSwgYWN0aXZhdGUgdGhlIA==')Freeze LagFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('eUyBVKEsHstQoPXtzLjAuFVLcyVmPQcDlJHXQwOpceAYEyEmDTpbNIuIGFuZCA=')ActivateFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('MziZianiCOkIcmZKjavnxfqRblTyuBCKBECixWTHqEhmXapBAwkLKXFIHNpbXVsdGFuZW91c2x54oCi'))
+Tab:AddTextbox({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('YFJUfjXepKpOpRjgKIMPDKqAZClLqtfyEwgjHnYmmHsdlRQinZBCeowVmljdGltIFVzZXJuYW1lwq8='),
+	Default = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('bUEFBVeBzBPebblCClCrXIJNvESOtgonlDJvZORBjSufSqOKrCpVqqzVHlwZSBVc2VybmFtZQ=='),
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+--[[
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('aMBwjvpQazFUrrYeDGuRZWdxDFiyXwuscfzrskHkyNxGcnbLMoaskayRnJlZXppbmcgVHJhZGU='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('tgKIvfstAxlNaJiJKcMvPygGbCFuTkgeRdreUtpdadfAhEkOwHMOrQuTGF1bmNo'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('vIidgimulBDuZqNrnHGxLfRedXRWnwfRkNNeMLzftLYNQvBnpXaMpYqSGF0Y2ggRWdn'),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ifvVsfPbtGIrbmVFMgSUDWygfAmdozKTSvBNjbyGLhWbORhBeUusXPecmJ4YXNzZXRpZDovLzE3NDc4ODAxOTg0'),
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('SmNoAYQMarVGOdwuSgfLzMrZqksxistAvAhgfhJtRhGhXdPFOszJzgWQ2F1dGlvbg=='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('qfoNkUQxYdaITCuqDkjJlrdIWLurlNbYPfQybFFpVlVqpRRSADpRith4oCiRW5zdXJlIHlvdSBoYXZlIGFuIGFkZXF1YXRlIGFtb3VudCBvZiBjb2luc+KAog=='))
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('xCtJbbHbRTAtFDuoTjCYCrDgQMrBkkeZRSSTMCLqmVsBHylkSWBuGkIR3VpZGU='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('FSPjHTJfuPwikeHHNrBkEQOZghVGRrLOxHybrzxOcwexsdYempIRtXJ4oCiU3RhcnQgYnkgaW5jdWJhdGluZyB0aGUgZWdnLCB0aGVuIHVubGVhc2ggaXRzIHBvdGVudGlhbCB3aXRoIHRoZSA=')Fast HatchFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('dbJTeNppALdahFPiKKRCkggRTHtZCJlBkjfnXnumcvqUKywgyEtYcWcIHRvZ2dsZeKAog=='))
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ZIQpZqFezzYTgTiPMiXzoFhKXFTcXUrcamZRPiHiuchcqWFOIikRZtMRmFzdCBIYXRjaGluZw=='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('NDdspMcrJzwGbEnRdWRIypIZewDuLmuCyzTmhpGDiPbkVWZYbxzOxJdQXV0byBIYXRjaA=='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('zWzXXsFnyvkvUYWSVUDvBgOuMimuEzRCabiCRpglCxTYpISytCMvPPHUmVtb3ZlIEVnZyBBbmltYXRpb24='),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lyKhVLeInLCsnbiRWZnqwybMezeDFdDTnDSiskHXjFYGtWVfzWHHAePTWluaUdhbWVz'),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('OiVviTTOiEptaYSYDgBGSGjDxppPCjRttITFlujZXukRSVtCGQwjQWCcmJ4YXNzZXRpZDovLzE3NDc4ODc5NTQ4'),
+	PremiumOnly = false
+})
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('emjepZvVVgMxkMRByGquOtiHABpvSEBrIyCuEQTErmUdmtqlhDpxVgWR3VpZGU='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('HOEUpjgKXRvfRnaHtmHUfxJoMCsTXjDcVIdlCUesLQdqSpuTejsXlGH4oCiRW5zdXJlIHRvIGVudGVyIHRoZSBhcmVhIGJlZm9yZSBhY3RpdmF0aW5nIGl04oCi'))
+local Section = Tab:AddSection({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('paMAwMGAxOySVbDkfuqqenKZPATkWcEDDDIIkUZbeJYUaGFinVeadFeRmlzaGluZw==')
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ABpeESvnCTNCzvlwweuHpXvQCtSMqvhuDfjekbAoymWxzXVDIovloAaRmFzdCBGaXNoaW5n'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('WfkoHdXSMRiIOSxFQiXUlavIjYXwkpMxnJRvaFfLYmNEmChlikSNgmJRGlnZ2luZw==')
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('RmxgygAXBawEoftUGrLKzNinnUzehDHfKrCpAIHnWepYzuRnvvVLBuxRmFzdCBEaWdnaW5n'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('wyZCFrwnUHPXKabcpDCumVtqeDDTzcxGfgzofzKsvrleKJGQgHdTkYqR2xpdGNoIEl0ZW0='),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('xzZTgxpEiFfKEZydBRheGBTFkbVlYYXgAZeEooMiTIvEMUWqdlOivMAcmJ4YXNzZXRpZDovLzE3NDc4ODI0NzA5'),
+	PremiumOnly = false
+})
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('fNDepOBnhpRbmxsyjPowwzcVEVOlvPHkURlhdSkYoQkKHLkFdEDZpAuR3VpZGU='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('jbFgWsIRVCIDtdMLaOxIrveqaCYhBbGKlYLKZtByShzqvMTtUUWavFG4oCiWW91IG11c3QgaW5wdXQgdGhlIG5hbWUgb2YgdGhlIGl0ZW0uIEFmdGVyIGVudGVyaW5nIGl0cyBuYW1lLCB0b2dnbGUg')DUPEFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('HSBoybEmwyeySDhGcluIoUGjJAypNyMTEXKMTyfPxiyHOcZWQoxtrsTIGFuZCB3YWl0IGZvciAzMCBzZWNvbmRz4oCi'))
+Tab:AddTextbox({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('OTgYtoedGdqXNwQWhXcwkxrtHyuHUtHpCCyRCLvivrgfuXUmOIqsfbAR2xpdGNoIEl0ZW0='),
+	Default = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('PxfyPpObYUXTGKNDybmfaBwdbcPwLOHIuPFIZnFGYudkvhbcEtSDxcTR2xpdGNoIEl0ZW0='),
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+Tab:AddToggle({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('kXHHThvWiOuFBauDDBAedUYMSyMkpDHdaBBWDnMRxaTxRFqPmsOSqRaU3RhcnQgRHVwaW5n'),
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('loEzwHCRutJurjFfLQxWruKJPQRgnFBOzgzAfjyLJajVByPQDOOXfqJRHVwaW5nIEh1Z2U='),
+	Icon = FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('LKWtREVDUdIGaLlHvRVuOWuclFFqdxvlpUoUvohsLYMvrjPlknowMgdcmJ4YXNzZXRpZDovLzE3NDc4ODM2NTM0'),
+	PremiumOnly = false
+})
+Tab:AddParagraph(FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('BEgUrzXazJWAegJdowAEmGJdSEmKAEYDFqmbMVwYGfNwFZImdLYFNiER3VpZGU='),FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('REHjobobJguhpkIJyjlCEqNqQzkHDPIFwXNvPdfKUmSGpTDbJUcesPR4oCiVGhpcyB3aWxsIG9ubHkgd29yayB3aXRoIGh1Z2VzLCBzbyBpZiB5b3UgZW5jb3VudGVyIGFueSBidWdzLCBlbnN1cmUgeW91IGhhdmUgaHVnZXMuIElmIGl0IGRvZXNu')t work, create a ticket in my Discord server.•FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('GUFmQVsyzycXUyVUWxknUisvCRRznvKVkNTZWceuRpUPXsapGbpILXYKQ0KVGFiOkFkZFRleHRib3goew0KCU5hbWUgPSA=')Dupe AmountFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('DWJeqLIwaloifbaXpINkbntVIZGNOpDWIhBuyPEYytnEuuzHuwmujdKLA0KCURlZmF1bHQgPSA=')Type AmountFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('NOOIQdqxyUWPFogBjoUvHVtZvYECbHahDZRrHPxrPeJcAlIQQBalOryLA0KCVRleHREaXNhcHBlYXIgPSB0cnVlLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQoJCXByaW50KFZhbHVlKQ0KCWVuZAkgIA0KfSkNClRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Start DupingFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('KGbShItgMeLIRkbEOcWzwyQjILCjSNWjbnbVDrBDkkxOzqcJaPjzqIOLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('bmhtNWPLpqbqpnIohSsYBRUcHRUnpteOdsJxEurTDipznWLggtxuSqFKSkoKQ0KCQkJDQoJCQl3YWl0KDUpDQpsb2NhbCBtZXNzYWdlID0gcmVxdWlyZShnYW1lLlJlcGxpY2F0ZWRTdG9yYWdlLkxpYnJhcnkuQ2xpZW50Lk1lc3NhZ2UpDQogICAgbWVzc2FnZS5FcnJvcig=')DUPED SUCCESS!FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QrdIMUfZqnjszjIlvBMRGSCCsOWXlXKhSoCSLHErmWAlQbUvMKkQsCmKQ0KCQkJDQogICAgbG9jYWwgbGliID0gcmVxdWlyZShnYW1lLlJlcGxpY2F0ZWRTdG9yYWdlLkxpYnJhcnkpDQoNCmxvY2FsIGZyb21QZXQgPSA=')DogFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('WufQNlTeUQOOECYoBlLqgLwfKbrBSlfVwQTzxueMCdLSjMYjmQOqmnuDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('bzpLkWHKHyUUwYXdHyRCybovKOqKByiXefIfdgtOXyzmvnSfnOFgYFvDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('MhIxrXAhWQXUwTGwDoERIFiNmEdgwHBYMKSMmtxFBALvQozmEnXEYkrDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('vHzvLidrJuakAqGwmYuLDnjlITDsIvfazBqoUiesoweVvwmzNCwoSBUDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')CorgiFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('OtEzkZdXBdHmfzXUfoeudlnSndBNvAePIsEFJxrhvoLcTOTDpUqBwabDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('qpoHLIwzqdvLuuBfhVlQLOKbgczJzMDtbuslhlhbOIZepIkOmADdctHDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')BunnyFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('hwQqirwLIXTWjSHSjPCytGRoKYUQRoRDMUGjBXOgGHHvvdgbyRHwdLuDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('nWlLbswFpHooyFscuBxEHCwVRRZkMIawMjbBadMvfjXXpjflHrsGxtVDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')AxolotlFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('szYSdeJZubSxjKpfDytUJisghFyTWcefbsULWGipidzdQaHlnqfnFsLDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('sEZYYAKiWhbedJpxYhwrZHYehZOpsmFoBUjzJYiGEhFbihZnudIMVdIDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')DalmatianFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('FuUoATwjGYqULDnmYAywUWoOlJAykwVmUhNQNJbonPtFMxuOimMfrfEDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('jtlbvqamedmqWMDlhfakrTLTtLzAOYGiXeNxSPXxlVcXhmHuSzhTKxyDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')ChickFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('uYaFtNIJwIkfKLWBRWeqAygCHsSLjEsSXenngAqrdhYZLqTIrbJdenqDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ixHEOlmJKtaZsbSYMTIgXWNxwQcpQuYoxMWFGqEzUyadiHWlEJhfqtRDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')DuckyFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('OPoWRDtcUILDFrEINXpeIeLXfXjAMgsZeOsUxKBLnGKtuFEMkHRGhoJDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('kWRSzjltTTwsMUeLTkNPUnfxGgdnDrAipeHBMEJYhYfNqlLmbgvYdjaDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')ElephantFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ZVkMFPietDjRSKXBdBDBxJQJXtgzEABFrtzyfBgJGWhXUcaZZMJxYMSDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('BKksXfSGEQyNjrFBuzXUwJDfybHxKyZwBNALTmopWclxZySQOSeDwKoDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')BeeFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('hlHBnLHnXvNOEAooGuQBnImOrPYGKzEADeIGeFynDbpbeEBDbTsvWPODQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QTEiiBGvOkaxVXNLMexEksvUPNqhNYijtrENXdcbpakAoJFAzbcEWnaDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQogICAgZW5kDQoNCiAgICBsb2NhbCBsaWIgPSByZXF1aXJlKGdhbWUuUmVwbGljYXRlZFN0b3JhZ2UuTGlicmFyeSkNCg0KbG9jYWwgZnJvbVBldCA9IA==')FlamingoFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('DAfFZkTrElOqeSzhrLjXXgNVzqidZniVKUnSxtBjkBWyFiULRqoyphmDQpsb2NhbCB0b1BldCA9IA==')Huge Night Terror CatFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('qVYbUPgBRZcezOSClryaTAnEsZRKfNVoFcDIBGXhOQCrDhxmaCoyflpDQoNCmZvciBpLHYgaW4gcGFpcnMobGliLkRpcmVjdG9yeS5QZXRzW2Zyb21QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSBuaWwNCmVuZA0KZm9yIGksdiBpbiBwYWlycyhsaWIuRGlyZWN0b3J5LlBldHNbdG9QZXRdKSBkbw0KICBsaWIuRGlyZWN0b3J5LlBldHNbZnJvbVBldF1baV0gPSB2DQoJCQllbmQNCgkJZW5kDQoNCgl9KQ0KDQotLVtbDQpOYW1lID0gPHN0cmluZz4gLSBUaGUgbmFtZSBvZiB0aGUgYnV0dG9uLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSBidXR0b24uDQpdXQ0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIHRleHRib3guDQpEZWZhdWx0ID0gPHN0cmluZz4gLSBUaGUgZGVmYXVsdCB2YWx1ZSBvZiB0aGUgdGV4dGJveC4NClRleHREaXNhcHBlYXIgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGV4dCBkaXNhcHBlYXIgaW4gdGhlIHRleHRib3ggYWZ0ZXIgbG9zaW5nIGZvY3VzLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSB0ZXh0Ym94Lg0KXV0NCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0YWIuDQpJY29uID0gPHN0cmluZz4gLSBUaGUgaWNvbiBvZiB0aGUgdGFiLg0KUHJlbWl1bU9ubHkgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGFiIGFjY2Vzc2libGUgdG8gU2lydXMgUHJlbWl1bSB1c2VycyBvbmx5Lg0KXV0NCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0b2dnbGUuDQpEZWZhdWx0ID0gPGJvb2w+IC0gVGhlIGRlZmF1bHQgdmFsdWUgb2YgdGhlIHRvZ2dsZS4NCkNhbGxiYWNrID0gPGZ1bmN0aW9uPiAtIFRoZSBmdW5jdGlvbiBvZiB0aGUgdG9nZ2xlLg0KXV0NCg0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIHRleHRib3guDQpEZWZhdWx0ID0gPHN0cmluZz4gLSBUaGUgZGVmYXVsdCB2YWx1ZSBvZiB0aGUgdGV4dGJveC4NClRleHREaXNhcHBlYXIgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGV4dCBkaXNhcHBlYXIgaW4gdGhlIHRleHRib3ggYWZ0ZXIgbG9zaW5nIGZvY3VzLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSB0ZXh0Ym94Lg0KXV0NCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0YWIuDQpJY29uID0gPHN0cmluZz4gLSBUaGUgaWNvbiBvZiB0aGUgdGFiLg0KUHJlbWl1bU9ubHkgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGFiIGFjY2Vzc2libGUgdG8gU2lydXMgUHJlbWl1bSB1c2VycyBvbmx5Lg0KXV0NCg0KbG9jYWwgVGFiID0gV2luZG93Ok1ha2VUYWIoew0KCU5hbWUgPSA=')DeepRoomFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lkMxmAazeVuHXMpOKoJIADBZlwKoHoqPYVEJHscvhXTyRIIcyjMIJwTLA0KCUljb24gPSA=')rbxassetid://17478846212FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('HFiKCSlGuOFpLJnkOdSvQorRLvlIUAExiDemKVIuZCLmwFOQBLeMcejLA0KCVByZW1pdW1Pbmx5ID0gZmFsc2UNCn0pDQpsb2NhbCBTZWN0aW9uID0gVGFiOkFkZFNlY3Rpb24oew0KCU5hbWUgPSA=')Dupe BackRooms KeyFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('SFfwYTKfqZMLIoYveqdkcgALhrhXKqRCHXkSzyZTcaAhRUiyvWeGKjbDQp9KQ0KVGFiOkFkZFRleHRib3goew0KCU5hbWUgPSA=')DeepRoom KeyFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('tbiNTMPrgmHTcoeNXkFBLtGKvAGSljURvkMgAUZjASHlyaOtgELjkiQLA0KCURlZmF1bHQgPSA=')AmountFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ZGQANJYqEkyLwJfgrTReASXQVrHvonvjbqOPTzbilnhTzeMEOoiCYHkLA0KCVRleHREaXNhcHBlYXIgPSB0cnVlLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQoJCXByaW50KFZhbHVlKQ0KCWVuZAkgIA0KfSkNClRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Duping NowFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('hYvnRnQLQWJLNlUbshhrpeBVnMfZfXKPryFVdfwyubgojNwUShMyoNaLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lKGazhFucBRqkYzlIuqRQfjljrExprRFevOhdSJImOREpWhiHYLhZNqKSkoKQ0KICAJZW5kICAgIA0KfSkNCmxvY2FsIFNlY3Rpb24gPSBUYWI6QWRkU2VjdGlvbih7DQoJTmFtZSA9IA==')TeleportFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('yDiRtJmWuxhAoywiQDbjNPYmgSISvxKdwXtWcFlPAEASxgJNJZpAipvDQp9KQ0KVGFiOkFkZFBhcmFncmFwaCg=')GuideFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('TJlCFMXzVKwREyKTOfdscuzwpAVBiWmJbrsXVhNPfkhVyuLZyzldSEyLA==')•Make sure you have enough backroom keys to make it work•FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('qsMmBSrTSgJrBgEuqOMjpfRLoprVIetMFmYuHeKXIEWynUzOqYAbGBmKQ0KVGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')TELEPORT TO 100X EGGFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('QrusJezwlKVDLOApOrIaJkGwtBZpkdDXJWOHUPMOiQomHNuTVzIpZChLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCQlwcmludCg=')Start ButtonFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('eimsptCacsTUKwcAVzzncoZVzUuPcBYnOBbzPhYLPqYuYDkXouqwMYQKQ0KICAJZW5kICAgIA0KfSkNClRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')TELEPORT TO 50X EGGFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('PSEWYEPpFKUfyBAhZqNpuPMOfBOTLCOyVRljPMWiXXxNDVRGCOcHsLkLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('qiGtrmYfxrnTQAMctMkFnJIbCijSEPSoTPmfmEVHmpSJOfCMNDzenLuKSkoKQ0KCQllbmQNCg0KCX0pDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSBidXR0b24uDQpDYWxsYmFjayA9IDxmdW5jdGlvbj4gLSBUaGUgZnVuY3Rpb24gb2YgdGhlIGJ1dHRvbi4NCl1dDQotLVtbDQpOYW1lID0gPHN0cmluZz4gLSBUaGUgbmFtZSBvZiB0aGUgYnV0dG9uLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSBidXR0b24uDQpdXQ0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIHNlY3Rpb24uDQpdXQ0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIGJ1dHRvbi4NCkNhbGxiYWNrID0gPGZ1bmN0aW9uPiAtIFRoZSBmdW5jdGlvbiBvZiB0aGUgYnV0dG9uLg0KXV0NCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0ZXh0Ym94Lg0KRGVmYXVsdCA9IDxzdHJpbmc+IC0gVGhlIGRlZmF1bHQgdmFsdWUgb2YgdGhlIHRleHRib3guDQpUZXh0RGlzYXBwZWFyID0gPGJvb2w+IC0gTWFrZXMgdGhlIHRleHQgZGlzYXBwZWFyIGluIHRoZSB0ZXh0Ym94IGFmdGVyIGxvc2luZyBmb2N1cy4NCkNhbGxiYWNrID0gPGZ1bmN0aW9uPiAtIFRoZSBmdW5jdGlvbiBvZiB0aGUgdGV4dGJveC4NCl1dDQotLVtbDQpOYW1lID0gPHN0cmluZz4gLSBUaGUgbmFtZSBvZiB0aGUgc2VjdGlvbi4NCl1dDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0YWIuDQpJY29uID0gPHN0cmluZz4gLSBUaGUgaWNvbiBvZiB0aGUgdGFiLg0KUHJlbWl1bU9ubHkgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGFiIGFjY2Vzc2libGUgdG8gU2lydXMgUHJlbWl1bSB1c2VycyBvbmx5Lg0KXV0NCg0KbG9jYWwgVGFiID0gV2luZG93Ok1ha2VUYWIoew0KCU5hbWUgPSA=')MiscFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('sZuGnWHNytcYXIBFHswxptbzBJKocWmpdXfhHSORbauPzcawlYIrejvLA0KCUljb24gPSA=')rbxassetid://17478862101FdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('zKpBZSZWrvUBiYdfWhMiuRXZpWUgcbYHXucQUOpSgaXciNTVLxOZmDbLA0KCVByZW1pdW1Pbmx5ID0gZmFsc2UNCn0pDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSB0YWIuDQpJY29uID0gPHN0cmluZz4gLSBUaGUgaWNvbiBvZiB0aGUgdGFiLg0KUHJlbWl1bU9ubHkgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGFiIGFjY2Vzc2libGUgdG8gU2lydXMgUHJlbWl1bSB1c2VycyBvbmx5Lg0KXV0NClRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')FPS BoosterFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('KIBKhUnyUxIKVrMUZTZzltQZbuQnRLbpGirtWjujTitwXbqAtHSsgWcLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('duxQIkKyYsmlgrMvAyfoCuAxKWkHFtESZWeMzqgEhCdIiUVfFiLergXKSkoKQ0KCQllbmQNCg0KCX0pDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSBidXR0b24uDQpDYWxsYmFjayA9IDxmdW5jdGlvbj4gLSBUaGUgZnVuY3Rpb24gb2YgdGhlIGJ1dHRvbi4NCl1dDQpUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Server HopFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ABVULzOjXvatTaQWeyHXDiTPnaMeocEJhoqimFyosGxfcoedxBDxROtLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCQkJbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.luaFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('ZlYjLGESnWwBldOfERJxELcIjlrmjGcdCNSXQWAZNKDLoTFkerbNAAaKSkoKQ0KCQllbmQNCg0KCX0pDQoNCi0tW1sNCk5hbWUgPSA8c3RyaW5nPiAtIFRoZSBuYW1lIG9mIHRoZSBidXR0b24uDQpDYWxsYmFjayA9IDxmdW5jdGlvbj4gLSBUaGUgZnVuY3Rpb24gb2YgdGhlIGJ1dHRvbi4NCl1dDQpUYWI6QWRkVGV4dGJveCh7DQoJTmFtZSA9IA==')WebhookFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('lXGZKbTMvKYwAsWdGMnfPfROIqzumcTGvNLoufxYeaSOIvsmWeLGgziLA0KCURlZmF1bHQgPSA=')Put it hereFdmhbJNIXIJEsHdMxLLozZHvvyNONZfeUktiiBXzCbqsyDduZzssWwN('mdYpPzWgjhzQcLhuwVjeCwwRRdPPJxdXgVNVrZhLXCGPmEIWWnWPjToLA0KCVRleHREaXNhcHBlYXIgPSB0cnVlLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQoJCXByaW50KFZhbHVlKQ0KCWVuZAkgIA0KfSkNCk9yaW9uTGliOkluaXQoKQ0KLS1bWw0KTmFtZSA9IDxzdHJpbmc+IC0gVGhlIG5hbWUgb2YgdGhlIHRleHRib3guDQpEZWZhdWx0ID0gPHN0cmluZz4gLSBUaGUgZGVmYXVsdCB2YWx1ZSBvZiB0aGUgdGV4dGJveC4NClRleHREaXNhcHBlYXIgPSA8Ym9vbD4gLSBNYWtlcyB0aGUgdGV4dCBkaXNhcHBlYXIgaW4gdGhlIHRleHRib3ggYWZ0ZXIgbG9zaW5nIGZvY3VzLg0KQ2FsbGJhY2sgPSA8ZnVuY3Rpb24+IC0gVGhlIGZ1bmN0aW9uIG9mIHRoZSB0ZXh0Ym94Lg0KXV0NCg0KbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQo')https://raw.githubusercontent.com/tobi437a/Scripts/main/ba43286c3e5bf192afd711f5.lua'))()
